@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body {
+    line-height: 1.5; /* replaces @apply leading-normal */
+    font-feature-settings: "salt" on, "ss01" on, "ss02" on;
+  }
+}
+
+@layer components {
+  .container {
+    max-width: 1400px;  /* replaces @apply max-w-[1400px] */
+    margin-left: auto;  /* replaces @apply mx-auto */
+    margin-right: auto;
+  }
+}
+
+.loader-text {
+  font-size: clamp(2rem, 8vw, 4rem);
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: #000;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  font-weight: 300;
+}
+
+.loader-line {
+  height: 2px;
+  background: linear-gradient(to right, #000, #333);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
